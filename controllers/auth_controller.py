@@ -4,7 +4,7 @@ from ..services.auth_service import register_user, login_user
 auth_app = Blueprint("auth_app", __name__)
 
 
-@auth_app.route("/register", methods=["POST"])
+@auth_app.post("/register", methods=["POST"])
 def register():
     try:
         data = request.json
